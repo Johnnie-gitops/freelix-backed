@@ -45,3 +45,6 @@ docker push freelixlaos/freelix-backend:2.2.3
 docker compose -f docker-compose.dev.yml up -d
 
 
+
+
+
