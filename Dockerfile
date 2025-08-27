@@ -38,7 +38,7 @@ FROM node:20-bookworm-slim
 WORKDIR /app
 
 ENV NODE_ENV=production \
-    PORT=5001 \
+    PORT=3000 \
     npm_config_loglevel=warn \
     # เผื่อ tesseract.js ต้องการอ่านภาษา
     TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
@@ -65,7 +65,7 @@ RUN rm -rf ./node_modules/.cache && \
     find ./node_modules -type d \( -name "test" -o -name "tests" -o -name "examples" \) -prune -exec rm -rf {} +
 
 # ใช้พอร์ตเดียวกับ ENV
-EXPOSE 5001
+EXPOSE 3000
 
 # Healthcheck ให้ชี้ตามพอร์ตเดียวกัน
 HEALTHCHECK --interval=30s --timeout=30s --start-period=10s --retries=3 \
