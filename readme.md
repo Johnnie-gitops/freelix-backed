@@ -17,6 +17,8 @@ npm start
 
 
 
+
+
 git checkout dev
 # 1. Switch to the correct main branch
 git checkout main
